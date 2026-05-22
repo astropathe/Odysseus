@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Odysseus",
+  "version": "1.0",
+  "description": "IA locale d'obfuscation sémantique",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Odysseus Monitor",
+    "default_popup": "popup.html"
+  }
+}

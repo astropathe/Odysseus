@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 320px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 16px;
+        }
+        h3 {
+            color: #38bdf8;
+            margin-top: 0;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status {
+            font-size: 11px;
+            background-color: #16a34a;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+        .box {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+        .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+        .value {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .score {
+            color: #34d399;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>Odysseus <span class="status">Actif</span></h3>
+    
+    <div class="box">
+        <div class="label">Votre navigation réelle :</div>
+        <div id="real-activity" class="value">En attente de navigation...</div>
+    </div>
+
+    <div class="box">
+        <div class="label">Contre-poids injecté :</div>
+        <div id="decoy-activity" class="value">—</div>
+    </div>
+
+    <div class="box" style="margin-bottom: 0;">
+        <div class="label">Score de brouillage publicitaire :</div>
+        <div id="decoy-score" class="value score">—</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

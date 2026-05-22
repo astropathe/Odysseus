@@ -4,7 +4,9 @@ import { pipeline, env } from './lib/transformers.min.js';
 env.allowLocalModels = false; 
 env.backends.onnx.wasm.proxy = false;
 env.backends.onnx.wasm.numThreads = 1;
-env.backends.onnx.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/';
+
+// MODIFICATION CRUCIALE POUR LE STORE : Pointage local absolu
+env.backends.onnx.wasm.wasmPaths = browser.runtime.getURL('lib/');
 
 let embeddingPipeline = null;
 let lastProcessedTitle = ""; 

@@ -13,8 +13,10 @@
     "type": "module"
   },
   "browser_action": {
-    "default_icon": "icons/icon.png",
     "default_title": "Odysseus Monitor",
     "default_popup": "popup.html"
-  }
+  },
+  "web_accessible_resources": [
+    "lib/*.wasm"
+  ]
 }

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icons/icon.png" alt="Odysseus Logo" width="200"/>
+  <img src="icons/icon_bandeau.png" alt="Odysseus Banner" width="100%"/>
 </p>
 
 # Odysseus 

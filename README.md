@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icons/icon.png" alt="Odysseus Logo" width="200"/>
+</p>
+
 # Odysseus 
 
 Odysseus est une extension Firefox de protection de la vie privée qui utilise une **IA sémantique locale** (`all-MiniLM-L6-v2`) pour brouiller les algorithmes de profilage publicitaire par injection de bruit.

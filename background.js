@@ -10,9 +10,9 @@ env.backends.onnx.wasm.wasmPaths = browser.runtime.getURL('lib/');
 
 let embeddingPipeline = null;
 let lastProcessedTitle = ""; 
-let cachedDecoyVectors = []; // Stockage ultra-rapide des empreintes pré-calculées
+let cachedDecoyVectors = []; 
 
-// LE DICTIONNAIRE PARFAIT : Équilibre total de l'espace vectoriel (42 Pôles)
+// LE DICTIONNAIRE
 const DECOY_DICTIONARY = [
     // --- AXE 1 : HISTOIRE ANCIENNE, ARCHÉOLOGIE & CIVILISATIONS ---
     "Histoire de l'Empire romain de sa fondation à sa chute.",
@@ -86,7 +86,7 @@ const DECOY_DICTIONARY = [
     "Le fonctionnement des réacteurs à fusion nucléaire expérimentaux.",
     "L'histoire des missions spatiales d'exploration automatique du système solaire.",
 
-    // --- GÉOGRAPHIE, CLIMATOLOGE & GÉOLOGIE ---
+    // --- AXE 7 GÉOGRAPHIE, CLIMATOLOGE & GÉOLOGIE ---
     "Les plus belles plages sauvages à visiter en Bretagne cet été.",
     "La formation géologique des fjords profonds de la côte ouest-norvégienne.",
     "L'analyse des courants marins profonds et la circulation thermohaline mondiale.",
@@ -160,8 +160,7 @@ async function injectSilentDecoy(queryText) {
         const response = await fetch(targetUrl, {
             method: 'GET',
             headers: {
-                'User-Agent': navigator.userAgent,
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9'
             }
         });
 

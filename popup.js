@@ -1,4 +1,3 @@
-// Fonction pour mettre à jour l'interface en direct
 async function updatePopup() {
     const data = await browser.storage.local.get(['lastReal', 'lastDecoy', 'lastScore']);
     
@@ -13,8 +12,6 @@ async function updatePopup() {
     }
 }
 
-// Mettre à jour dès qu'on ouvre le popup
 updatePopup();
 
-// Écouter si une mise à jour survient pendant que le popup est ouvert
 browser.storage.onChanged.addListener(updatePopup);

@@ -5,8 +5,9 @@
   "description": "IA locale d'obfuscation sémantique",
   "permissions": [
     "tabs",
-    "<all_urls>",
-    "storage"
+    "storage",
+    "http://*/*",
+    "https://*/*"
   ],
   "background": {
     "scripts": ["background.js"],
@@ -17,6 +18,14 @@
     "default_popup": "popup.html"
   },
   "web_accessible_resources": [
-    "lib/*.wasm"
-  ]
+    "lib/ort-wasm.wasm",
+    "lib/ort-wasm-simd.wasm",
+    "lib/ort-wasm-threaded.wasm"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "odysseus-io@astropathe.addons",
+      "strict_min_version": "109.0"
+    }
+  }
 }
